@@ -6,8 +6,10 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "chalk": "^4.0.0",
     "ejs": "~2.6.1",
     "express": "^4.16.4",
+    "mongoose": "^5.9.16",
     "nodemon": "^2.0.4"
   }
 }

@@ -2,8 +2,8 @@ const express = require('express');
 const path = require('path');
 
 
-const indexRouter = require('./routes/login');
-const usersRouter = require('./routes/register');
+const loginRouter = require('./routes/login');
+const registerRouter = require('./routes/register');
 
 const app = express();
 
@@ -14,9 +14,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/',indexRouter);
-app.use(indexRouter);
-app.use(usersRouter);
+app.use('/',loginRouter);
+app.use(loginRouter);
+app.use(registerRouter);
 
 
 module.exports = app;
