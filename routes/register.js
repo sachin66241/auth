@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/register', function(req, res, next) {
-  res.send('This is register page');
+router.get('/register', (req, res, next)=> {
+  res.render('register');
 });
 
 module.exports = router;
