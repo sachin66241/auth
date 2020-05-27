@@ -25,3 +25,22 @@ Goal of this test is to assert (to some degree) your coding and architectural sk
 * Coding style guides, for example PSR-2
 
 Good luck!
+
+### START
+
+npm install  - for install all node dependecies
+
+npm start  - for starting the server at port 3000
+
+### PATH
+
+/  =>  home page or login page
+/register  => register page
+/login => login page
+
+Link between both pages is also provided at the bottom of the page
+
+### Database
+
+Database connection is provided in /bin/db.js file
+mongodb creditails are also there in the same file can be used to connect via mongodb compass
