@@ -16,10 +16,9 @@ router.post('/register', async (req, res, next)=> {
   const {password} = req.body;
   const {dob} = req.body;
 
-  console.log(req.body)
   const entry = new Signup();
   var result = await entry.signup(first_name,last_name,email,password,dob);
-  console.log(result)
+ 
 })
 
 module.exports = router;

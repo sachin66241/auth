@@ -69,8 +69,8 @@ a {
 </head>
 <body>
 
-<form action="/action_page.php">
-  <div class="container">
+  <form id="loginForm" method="post" action="/login">
+    <div class="container">
     <h1>Login</h1>
     <hr>
 
@@ -80,8 +80,8 @@ a {
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" id="email" required>
     <br>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" required>
 
     <hr>
     <br>
@@ -96,6 +96,24 @@ a {
     <p>Create an account? <a href="/register">Sign up</a>.</p>
   </div>
 </form>
+
+<script>
+  var status = "<%= status %>";
+	switch (status) {
+    case "0":
+        alert("Your Are Not A Valid User. Please Register First.")
+				break;
+
+			case "1":
+        alert("Login Successful. Please Proceed..")
+				break;
+
+			case "2":
+        break;
+
+  }
+
+</script>
 
 </body>
 </html>

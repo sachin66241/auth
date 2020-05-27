@@ -1,14 +1,18 @@
  
-const loginSchema = require("../models/user");
+const registers = require("../model/register");
 
 class Login {
     constructor() {
-        this._loginSchema = new loginSchema();
+       // this._loginSchema = new loginSchema();
     }
     async login(email, password) {
-        const isUserExist = await this._userModel.findUser(email, password);
-        return isUserExist;
-    }
+            const result = await registers.organizations.find({ email, password }, '_id');
+            if (result.length) {
+              return result[0]._id;
+            }
+            else return false;
+          }
+    
    
 }
 
