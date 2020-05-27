@@ -7,7 +7,11 @@ class Signup {
     }
    
     async signup(first_name, last_name, email, password, dob) {
-      
+
+      const cross_check = await registers.organizations.find({ email}, '_id');
+      if (cross_check.length) {
+         return false;
+      }
       const register=  new registers.organizations({ first_name, last_name, email, password, dob });
       const result = await register.save();
       if (result) {

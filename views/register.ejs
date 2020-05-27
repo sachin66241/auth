@@ -99,5 +99,24 @@ a {
   </div>
 </form>
 
+<script>
+  var status = "<%= status %>";
+	switch (status) {
+    case "0":
+        alert("Email Id Has Been Already Taken. Try Again")
+				break;
+
+			case "1":
+        alert("Registration Successful. Please Proceed to Login..")
+				break;
+
+			case "2":
+        break;
+
+  }
+
+</script>
+
+
 </body>
 </html>

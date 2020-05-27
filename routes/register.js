@@ -4,7 +4,7 @@ var Signup = require('../controller/register')
 
 /* GET register form */
 router.get('/register', (req, res, next)=> {
-  res.render('register');
+  res.render('register',{status:"2"});
 });
 
 /* POST register form */
@@ -18,6 +18,12 @@ router.post('/register', async (req, res, next)=> {
 
   const entry = new Signup();
   var result = await entry.signup(first_name,last_name,email,password,dob);
+  if(!result){
+    res.render('register',{status:"0"})
+  }
+  else{
+    res.render('register',{status:"1"})
+  }
  
 })
 
